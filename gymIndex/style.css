@@ -1,0 +1,118 @@
+html, body { height: 100%;
+	     font-family: 'Open Sans'
+	   }
+h1 {
+	color: #e12836;
+}
+p {
+	color: #000;
+}
+
+.mySidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #e12836;
+  overflow-x: hidden;
+  transition: .7s;
+  padding-top: 60px;
+  font-family: 'Open Sans';
+  text-align:center;
+}
+
+.mySidebar a {
+  padding: 8px 8px 8px 0px;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.mySidebar a:hover {
+  color: #f1f1f1;
+  text-decoration: underline;
+}
+
+.mySidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .mySidebar {padding-top: 15px;}
+  .mySidebar a {font-size: 18px;}
+}
+
+
+#menuTitle { font-size:30px;
+	     font-family:"Open Sans";
+	     text-align:right;
+	     color:#ffffff;
+	   }
+#welcomeTitle { font-size:25px;
+             font-family:"Open Sans";
+	     align:top;
+	     margin-left:50%;
+	     margin-top:-30px;
+	     color:#e12836;
+           }
+
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 5px 20px 15px 20px;
+	width:50%;
+	margin-left:30%;
+	margin-top:40px;
+}
+
+input {
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+form input:invalid {
+  border-left-color: #ad1b26;
+	border-left-width: 6px;
+}
+
+form input:valid {
+  border-left-color: #1dd14a;
+	border-left-width: 6px;
+}
+
+.btn {
+  background-color: #e12836;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 95%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #cc2431;
+}
+
+#titleDropDown{
+	font-size:30px;
+	cursor:pointer;
+	font-family:"Open Sans";
+	color: #000;
+}

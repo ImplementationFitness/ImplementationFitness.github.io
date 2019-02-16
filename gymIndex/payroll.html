@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Update Membership</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="sidebar" class="mySidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <span id="menuTitle">MENU</span>
+        <hr>
+        <a href="file:///Users/GiannaCacciatore/Desktop/gymIndex/adminPage.html">Home</a>
+        <a href="file:///Users/GiannaCacciatore/Desktop/gymIndex/checkIn.html">Check-in Member</a>
+        <a href="file:///Users/GiannaCacciatore/Desktop/gymIndex/updateMember.html">Update Membership</a>
+        <a href="file:///Users/GiannaCacciatore/Desktop/gymIndex/employeeRecord.html">Employee Records</a>
+        <a href="file:///Users/GiannaCacciatore/Desktop/gymIndex/payroll.html">Payroll</a>
+</div>
+
+<span id="titleDropDown" onclick="openNav()">&#9776;  MENU</span>
+
+<script>
+        function openNav() {
+                document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+        document.getElementById("sidebar").style.width = "0";
+        }
+</script>
+
+<div id="welcomeTitle">
+        Employee Payroll
+</div>
+
+</body>
+</html>
