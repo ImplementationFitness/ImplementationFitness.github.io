@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" >
 
+
+<!--include style links for css and js links -->
 <head>
   <meta charset="UTF-8">
   <title>Log in form</title>
@@ -15,6 +17,8 @@
   
 </head>
 
+
+<!-- body; contains content of page -->
 <body>
 
   <div class="mobile-screen">
@@ -25,28 +29,65 @@
   </div>
   
   <div class="logo"></div>
-  
+
+
+<!--for new members -->  
   <form id="registration-form">
-    <input type="email" name="email" placeholder="E-mail">
+    <input type="username" name="username" placeholder="Username">
     <input type="password" name="pass" placeholder="Password">
     <input type="password" name="repass" placeholder="Repeat password">
     <a href="#" class="login-btn" id="signup-btn">Sign Up</a>
   </form>
 
+
+<!--login-->
   <form id="login-form">
-    <input type="email" name="email" placeholder="E-mail">
-    <input type="password" name="pass" placeholder="Password">
- <!--   <a href="#" class="login-btn">Log in</a> -->
-    <a href="#" class="login-btn">Log in</a>
+    
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
 
 
-<!--
-    <td align=right><input type="button" value="Login" onClick="Login(this.form);"></td>
---> 
+
+   <td align=right><input type="button" class="login-btn" value="Login" onClick="Login(this.form);"></td>
+ 
  </form>
 
+<script>
+
+
+/* js function containing arrays of usernames and passwords for login */
+
+function Login(form) {
+username = new Array("manager@gmail.com","member@gmail.com","employee@gmail.com");
+password = new Array("manager","member","employee");
+adminPage = "adminPage.html";
+userPage = "userPage.html";
+employeePage = "employeeRecords.html";
+
+if (form.username.value == username[0] && form.password.value == password[0]) {
+self.location.href =  adminPage;
+}
+if (form.username.value == username[1] && form.password.value == password[1]) {
+self.location.href = userPage;
+}
+if (form.username.value == username[2] && form.password.value == password[2]) {
+self.location.href = employeePage;
+}
+
+else {
+alert("The entered username or password is incorrect.");
+form.uname.focus();
+}
+return true;
+}
+
+</script>
+
+
  <script src="js/index.js"></script>
-  
+ 
+
+<!-- forgot password ? --> 
   <form id="fpass-form">
     <input type="text" name="forgotten" placeholder="E-mail or phone number">
     <a href="#" class="login-btn" id="getpass-btn">Get Password</a>
@@ -58,6 +99,9 @@
   </div>
   
 </div>
+
+
+<!-- some needed js links -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
   

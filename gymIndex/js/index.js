@@ -70,3 +70,32 @@ alert("Incorrect login credentials.");
 
 return true;
 } */
+
+/*
+function validate() {
+    var un = document.getElementById("usern").value;
+    var pw = document.getElementById("pword").value;
+    var valid = -1;
+
+    var unArray = ["markwalt", "jongossy", "lisacain", "jenndemp"];
+    var pwArray = ["mark1234", "flomaygo", "lisa1234", "jenny1234"];
+    var fnArray = ["Mark Walters","Jonathan Goss","Lisa Cain","Jenny Dempsey"];
+
+    for (var i=0; i <unArray.length; i++) {
+        if ((un == unArray[i]) && (pw == pwArray[i])) {
+            valid = i;
+            break;
+        }
+    }
+
+    if (valid != -1) {
+        alert ("Login was successful");
+        document.getElementById("mandatory1").value = fnArray[valid];
+    }
+    else {
+        alert("Invalid Username and/or Password! Please try again. You will not be able to submit this form without a successful login")
+        document.getElementById("pword").value = "";
+        document.getElementById("usern").value = "";
+        document.getElementById("usern").focus();
+    }
+} */
