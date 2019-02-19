@@ -53,34 +53,26 @@
  </form>
 
 <script>
-
-
 /* js function containing arrays of usernames and passwords for login */
-
 function Login(form) {
-username = new Array("manager@gmail.com","member@gmail.com","employee@gmail.com");
-password = new Array("manager","member","employee");
+username = new Array("JohnDoe@gmail.com","KenBone@gmail.com","KRuss@gmail.com","JWayne@gmail.com");
+password = new Array("JodyBody","Notpassword","Password1234", "Reacher1SCool");
 adminPage = "adminPage.html";
 userPage = "userPage.html";
-employeePage = "employeeRecords.html";
 
-if (form.username.value == username[0] && form.password.value == password[0]) {
+if ((form.username.value == username[0] && form.password.value == password[0]) || (form.username.value == username[1] && form.password.value == password[1])) {
 self.location.href =  adminPage;
 }
-if (form.username.value == username[1] && form.password.value == password[1]) {
+if ((form.username.value == username[2] && form.password.value == password[2]) || (form.username.value == username[3] && form.password.value == password[3])) {
 self.location.href = userPage;
 }
-if (form.username.value == username[2] && form.password.value == password[2]) {
-self.location.href = employeePage;
-}
 
-else {
+if ((form.username.value != username[0] && form.password.value != password[0]) && (form.username.value != username[1] && form.password.value != password[1]) && (form.username.value != username[2] && form.password.value != password[2]) && (form.username.value != username[3] && form.password.value != password[3])) {
 alert("The entered username or password is incorrect.");
 form.uname.focus();
 }
 return true;
 }
-
 </script>
 
 
