@@ -32,6 +32,27 @@
         function closeNav() {
         document.getElementById("sidebar").style.width = "0";
         }
+
+
+/* js function containing arrays of usernames and passwords for login */
+function Login(form) {
+firstName = new Array("Kurt","John");
+lastName = new Array("Russel", "Wayne");
+memberID = new Array("0001", "0002");
+welcome = "welcome.html";
+
+if ((form.firstName.value == firstName[0] && form.lastName.value == lastName[0] && form.memberID.value == memberID[0]) || (form.firstName.value == firstName[1] && form.lastName.value == lastName[1] && form.memberID.value == memberID[1])) {
+self.location.href =  welcome;
+}
+
+if ((form.firstName.value != firstName[0] && form.lastName.value != lastName[0] && form.memberID.value != memberID[0]) && (form.firstName.value != firstName[1] && form.lastName.value != lastName[1] && form.memberID.value != memberID[1])) {
+alert("The entered username or password is incorrect.");
+form.uname.focus();
+}
+return true;
+}
+
+
 </script>
 
 <div id="welcomeTitle">
@@ -43,14 +64,37 @@
     <div class="container">
       <form id="check-in">
             <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-            <input type="text" id="idNum" name="idNum" placeholder="Membership ID Number" required>
+            <input type="text" id="lastName"  name="lastName" placeholder="Last Name" required>
+            <input type="text" id="memberID"  name="idNum" placeholder="Membership ID Number" required>
 
-            <input type="submit" value="Check-In Member" class="btn">
-      </form>
+ <!--           <input type="submit" value="Check-In Member" class="btn"> -->
+
+            <td align=right><input type="button" class="btn" value="Check-In Member" onClick="Login(this.form);"></td> 
+
+      <div class = "space" style = "background-color:white"></div>
+
+
+    </div>
+
+
+
+     </form>
     </div>
   </div>
 </div>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+
+    <script src="js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+                <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+
+
 
 
 </body>
