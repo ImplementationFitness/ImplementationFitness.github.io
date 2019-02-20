@@ -1,42 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Update Membership</title>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="style.css">
+  <title>Update Membership</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
 
-        <script type = "javascript"  src="js/index.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
-
+  <script type = "javascript"  src="js/index.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
-
+<!-- Links for sidebar -->
 <div id="sidebar" class="mySidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <span id="menuTitle">MENU</span>
-        <hr>
-        <a href="adminPage.html">Home</a>
-        <a href="checkIn.html">Check-in Member</a>
-        <a href="updateMember.html">Update Membership</a>
-        <a href="employeeRecords.html">Employee Records</a>
-        <a href="payroll.html">Payroll</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <span id="menuTitle">MENU</span>
+  <hr>
+  <a href="adminPage.html">Home</a>
+  <a href="checkIn.html">Check-in Member</a>
+  <a href="employeeRecords.html">Employee Records</a>
+  <a href="payroll.html">Payroll</a>
 </div>
-
+<!-- "Button" to open menu -->
 <span id="titleDropDown" onclick="openNav()">&#9776;  MENU</span>
 
+<!-- Javascript for sidebar menu -->
 <script>
-        function openNav() {
-                document.getElementById("sidebar").style.width = "250px";
-        }
+  function openNav() {
+    document.getElementById("sidebar").style.width = "250px";
+  }
 
-        function closeNav() {
-        document.getElementById("sidebar").style.width = "0";
-        }
+  function closeNav() {
+    document.getElementById("sidebar").style.width = "0";
+  }
 </script>
 
 <div id="welcomeTitle">
         Update Membership
 </div>
+
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form id="editMember">
+            <input type="text" id="name" name="name" placeholder="First and Last Name" required>
+            <input type="text" id="idNum" name="idNum" placeholder="Membership ID Number" required>
+
+            <input type="button" value="Edit Member" class="btn" onclick="openEdit()">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div id="editInfo" class="infoEdit">
+  <input type="text" id="name" name="name" placeholder="First and Last Name" required>
+  <input type="text" id="memberId" name="memberId" placeholder="Member ID" required>
+  <input type="text" id="email" name="email" placeholder="Email" required>
+  <input type="text" id="address" name="address" placeholder="Address" required>
+  <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
+  <select name="membershipStatus" required>
+  <option value="Bronze">Bronze</option>
+  <option value="Silver">Silver</option>
+  <option value="Gold">Gold</option>
+  <option value="Diamond">Diamond</option>
+  </select>
+  <br>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeEdit()">Submit Changes</a>
+</div>
+
+<script>
+var members = [["Kurt Russel", "0001", "KRuss@gmail.com","123 Apple Lane","1234567","1960-02-02", "Diamond"],
+             ["John Wayne", "0002", "JWayne@gmail.com","234 Train Road","3217654","1965-05-23", "Bronze"]];
+
+var name   = document.getElementById("name").value;
+var memberId    = document.getElementById("memberId").value;
+var email = document.getElementById("email").value;
+var address = document.getElementById("address").value;
+var phoneNumber = document.getElementById("phoneNumber").value;
+var membershipStatus = document.getElementById("membershipStatus").value;
+
+        function openEdit() {
+                document.getElementById("editInfo").style.height = "250px";
+        }
+
+        function closeEdit() {
+        document.getElementById("editInfo").style.height = "0";
+        }
+</script>
 
 
 </body>

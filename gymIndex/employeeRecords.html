@@ -1,44 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Update Membership</title>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="style.css">
+  <title>Employee Records</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
 
-        <script type = "javascript"  src="js/index.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
-
-
+  <script type = "javascript"  src="js/index.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
-
+<!-- Links for sidebar -->
 <div id="sidebar" class="mySidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <span id="menuTitle">MENU</span>
-        <hr>
-        <a href="adminPage.html">Home</a>
-        <a href="checkIn.html">Check-in Member</a>
-        <a href="updateMember.html">Update Membership</a>
-        <a href="employeeRecords.html">Employee Records</a>
-        <a href="payroll.html">Payroll</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <span id="menuTitle">MENU</span>
+  <hr>
+  <a href="adminPage.html">Home</a>
+  <a href="checkIn.html">Check-in Member</a>
+  <a href="employeeRecords.html">Employee Records</a>
+  <a href="payroll.html">Payroll</a>
 </div>
-
+<!-- "Button" to open menu -->
 <span id="titleDropDown" onclick="openNav()">&#9776;  MENU</span>
 
+<!-- Javascript for sidebar menu -->
 <script>
-        function openNav() {
-                document.getElementById("sidebar").style.width = "250px";
-        }
+  function openNav() {
+    document.getElementById("sidebar").style.width = "250px";
+  }
 
-        function closeNav() {
-        document.getElementById("sidebar").style.width = "0";
-        }
+  function closeNav() {
+    document.getElementById("sidebar").style.width = "0";
+  }
 </script>
 
 <div id="welcomeTitle">
         Employee Records
 </div>
 
-
+<!-- Table headers for Employee Information -->
+<table id="employeeInfo" border="1">
+  <tr>
+    <th>Name</th>
+    <th>Employee ID</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Birthday</th>
+    <th>Availability</th>
+  </tr>
+</table>
+<!-- Javascript for table construction -->
+<script>
+  // Array holding employee information
+  var employees = [["John Doe", "0001", "JohnDoe@gmail.com","45 Small Rd","3155555", "1987-01-03",
+                      "MW: 10 AM - 3 PM, TTH: 9 AM - 12 PM, Sat: All Day, Sun: Not Available"],
+                   ["Ken Bone", "0002", "KenBone@gmail.com","849 Hill Ln","3155454", "1960-04-06",
+                      "MW: 3 PM - 10 PM, TTH: 1 PM - 9 PM, Sat: Not Available, Sun: All Day"]],
+                   table = document.getElementById("employeeInfo");
+  // For loop that fills table with array information
+  for(var i = 0; i < employees.length; i++) {
+      // This creates a new row
+      var newRow = table.insertRow(table.length);
+      for(var j = 0; j < employees[i].length; j++) {
+        // Creates a new cell
+        var cell = newRow.insertCell(j);
+        // Adds the value inside of the cell
+        cell.innerHTML = employees[i][j];
+        }
+    }
+</script>
 </body>
 </html>

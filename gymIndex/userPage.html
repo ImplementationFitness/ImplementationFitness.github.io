@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>User Welcome Page</title>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="style.css">
+  <title>User Home Page</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
 
-        <script type = "javascript"  src="js/index.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
-
+  <script type = "javascript"  src="js/index.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
-
+<!-- Links for sidebar -->
 <div id="sidebar" class="mySidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <span id="menuTitle">MENU</span>
-        <hr>
-        <a href="userPage.html">Home</a>
-        <a href="payPage.html">Make Payment</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <span id="menuTitle">MENU</span>
+  <hr>
+  <a href="userPage.html">Home</a>
+  <a href="payPage.html">Make Payment</a>
 </div>
-
+<!-- "Button" to open menu -->
 <span id="titleDropDown" onclick="openNav()">&#9776;  MENU</span>
 
+<!-- Javascript for sidebar menu -->
 <script>
-        function openNav() {
-                document.getElementById("sidebar").style.width = "250px";
-        }
+  function openNav() {
+    document.getElementById("sidebar").style.width = "250px";
+  }
 
-        function closeNav() {
-        document.getElementById("sidebar").style.width = "0";
-        }
+  function closeNav() {
+    document.getElementById("sidebar").style.width = "0";
+  }
 </script>
 
+
 <div id="welcomeTitle">
-        Welcome user!
+  Welcome user!
 </div>
 
 <div id="rightImage">
-        <img src="pic1.jpg" align="right"  style="width:250px;height:525px;margin-top:25px;margin-right:20px">
+  <img src="pic1.jpg" align="right"  style="width:250px;height:525px;margin-top:25px;margin-right:20px">
 </div>
 
 <div id="topImage">
-        <img src="pic4.png" align="top"  style="width:725px;height:200px;margin-top:25px;margin-left:20%">
+  <img src="pic4.png" align="top"  style="width:725px;height:200px;margin-top:25px;margin-left:20%">
 </div>
 
 <div id="bottomImage">
-        <img src="pic3.jpg" style="width:725px;height:315px;margin-left:20%;margin-top:10px">
+  <img src="pic3.jpg" style="width:725px;height:315px;margin-left:20%;margin-top:10px">
 </div>
 
 </body>

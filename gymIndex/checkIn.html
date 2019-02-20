@@ -11,6 +11,7 @@
 </head>
 <body>
 
+<!-- links for sidebar -->
 <div id="sidebar" class="mySidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <span id="menuTitle">MENU</span>
@@ -22,8 +23,12 @@
         <a href="payroll.html">Payroll</a>
 </div>
 
+
+<!-- "button" to open menu -->
 <span id="titleDropDown" onclick="openNav()">&#9776;  MENU</span>
 
+
+<!-- Javascript for sidebar menu -->
 <script>
         function openNav() {
                 document.getElementById("sidebar").style.width = "250px";
@@ -59,6 +64,8 @@ return true;
         Member Check-In
 </div>
 
+
+<!--form to check in a member-->
 <div class="row">
   <div class="col-75">
     <div class="container">
@@ -67,7 +74,6 @@ return true;
             <input type="text" id="lastName"  name="lastName" placeholder="Last Name" required>
             <input type="text" id="memberID"  name="idNum" placeholder="Membership ID Number" required>
 
- <!--           <input type="submit" value="Check-In Member" class="btn"> -->
 
             <td align=right><input type="button" class="btn" value="Check-In Member" onClick="Login(this.form);"></td> 
 
